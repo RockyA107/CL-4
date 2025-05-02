@@ -1,0 +1,27 @@
+Ofeed dataset :----   https://services.odata.org/V3/Northwind/Northwind.svc/
+
+
+
+
+https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+
+
+
+profit margin formula(new column) :--- = Table.AddColumn(#"Removed Columns", "profit margin", each if [Sales] = 0 then null else [Profit] / [Sales])
+
+
+Profit Margin (%) = DIVIDE([Profit], [Sales], 0)
+
+Total Cost = [Sales] - [Profit]
+
+Order Year = YEAR([Order Date])
+
+Order Month = FORMAT([Order Date], "MMMM")
+
+Sales Category = IF([Sales] > 500, "High", "Low")
+
+Profit Category = IF([Profit] > 0, "Profitable", "Loss")
+
+Quantity Category = IF([Quantity] >= 5, "Bulk Order", "Single Order")
+
+
