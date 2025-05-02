@@ -25,3 +25,41 @@ Profit Category = IF([Profit] > 0, "Profitable", "Loss")
 Quantity Category = IF([Quantity] >= 5, "Bulk Order", "Single Order")
 
 
+
+#######detail for each chart:################
+1. Bar Chart: Sales by Product Category
+X-axis → Product Category
+
+Y-axis → Sales (Sum)
+
+2. Pie Chart: Sales Share by Region
+Legend → Region
+
+Values → Sales (Sum)
+
+3. Line Chart: Sales Trend over Time
+X-axis → Order Date (Make sure it is set as Month or Date Hierarchy)
+
+Y-axis → Sales (Sum)
+
+4. KPI Cards:
+Card 1 → Value = Sales (Sum)
+
+Card 2 → Value = Profit (Sum)
+
+5. Matrix Table (like Pivot Table):
+Rows → Product Category
+
+Columns → None (Optional: add Region if you want)
+
+Values → Sales (Sum), Profit (Sum), Profit Margin (Average)
+
+6. Stacked Column Chart: Profit Margin by Region
+X-axis → Region
+
+Y-axis → Profit Margin (Average)
+
+7. Map (Optional):
+Location → Region
+
+Size → Sales (Sum)
