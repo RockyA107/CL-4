@@ -7,6 +7,22 @@ https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
 
 
 
+STEPS TO TRANSFORM: (YT video wala ahe )
+
+-from list of tables, select orders and products 
+-in products table, remove other columns of interest (keep productid, productname, qtyperunit, unitinstock) 
+-change the data type of the unitinstock column to whole number 
+-expand the order_details table (from orders) 
+-calculate linetotal for each order_details row (create linetotal as a new custom column with formula as order_details.unitprice * orderdetails.qty) 
+-rename and reorder linetotal column 
+-apply and close 
+-make relationship between both tables 
+
+
+
+
+
+
 profit margin formula(new column) :--- = Table.AddColumn(#"Removed Columns", "profit margin", each if [Sales] = 0 then null else [Profit] / [Sales])
 
 
